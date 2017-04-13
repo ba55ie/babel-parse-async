@@ -1,4 +1,8 @@
-import greeter from './greeter';
+import Greeter from './greeter';
 
-greeter('John Doe')
+const john = new Greeter('John Doe');
+
+console.log('greeter created:', john.name);
+
+john.greet()
 	.then(m => console.log('message:', m));

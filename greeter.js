@@ -1,11 +1,15 @@
-const sayHi = name => {
-	return new Promise(resolve => setTimeout(() => resolve(`Hello, ${name}`), 1000));
+export default class Greeter {
+	constructor(name)	 {
+		this.name = name;
+	}
+
+	async greet() {
+		const greeting = await Greeter.sayHi(this.name);
+
+		return greeting;
+	}
+
+	static sayHi(name) {
+		return new Promise(resolve => setTimeout(() => resolve(`Hello, my name is ${name}`), 1500));
+	}
 }
-
-const greeter = async name => {
-	const greeting = await sayHi(name);
-
-	return greeting;
-};
-
-export default greeter;
