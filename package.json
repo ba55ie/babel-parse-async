@@ -4,7 +4,7 @@
   "description": "A test for parsing, but not transforming, async functions",
   "main": "index.js",
   "scripts": {
-    "build": "browserify index.js -o dist/bundle.js -t [ babelify ]",
+    "build": "browserify index.js -t [ babelify ] -o dist/bundle.min.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ba55ie",
@@ -12,6 +12,7 @@
   "devDependencies": {
     "babel-plugin-syntax-async-functions": "^6.13.0",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-babili": "0.0.12",
     "babelify": "^7.3.0",
     "browserify": "^14.3.0"
   }
